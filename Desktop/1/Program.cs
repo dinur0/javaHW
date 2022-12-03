@@ -1,12 +1,11 @@
-﻿Console.WriteLine("Введите первое число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int b = Convert.ToInt32(Console.ReadLine());
-if (a>b)
-{Console.WriteLine("Первое число - большее");
-    
+﻿Console.WriteLine("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num < 100 || num > 999)
+{
+    Console.WriteLine("Число не трехзначное");
 }
 else
 {
-Console.WriteLine("Второе число - большее");
+    num = num / 10 % 10;
+    Console.WriteLine(num);
 }
