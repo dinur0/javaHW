@@ -1,29 +1,12 @@
-﻿Console.WriteLine("Введите первое число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите третье число: ");
-int c = Convert.ToInt32(Console.ReadLine());
-if (a>b)
+﻿Console.WriteLine("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num < 100 && num > -100)
 {
-    if (a>c)
-    {
-        Console.WriteLine("Максимальное число - первое:");
-        Console.WriteLine(a);
-    }
-    else
-    {
-        Console.WriteLine("Максимальное число - третье:");
-        Console.WriteLine(c);
-    }
+    Console.WriteLine("У числа нет третьей цифры");
 }
-else if (b>c)
+while (num >= 1000 || num <= -1000)
 {
-    Console.WriteLine("Максимальное число - второе:");
-    Console.WriteLine(b);
+    num = num / 10;
 }
-else
-{
-    Console.WriteLine("Максимальное число - третье:");
-    Console.WriteLine(c);
-}
+num = num % 10;
+Console.WriteLine(num);
