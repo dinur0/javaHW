@@ -1,10 +1,14 @@
-﻿Console.WriteLine("Введите число:");
+﻿Console.WriteLine("Введите число ");
 int a = Convert.ToInt32(Console.ReadLine());
-if (a % 2 == 0)
+if (a==1 || a==2 || a==3 || a==4 || a==5)
 {
-    Console.WriteLine("Число четное");
+    Console.WriteLine("нет");
 }
-else
+else if (a==6 || a==7)
 {
-    Console.WriteLine("Число нечетное");
+    Console.WriteLine("да");
+}
+else 
+{
+    Console.WriteLine("такого дня недели не существует");
 }
