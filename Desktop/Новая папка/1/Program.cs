@@ -1,19 +1,21 @@
-﻿Console.WriteLine("Введите размер массива: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Ответ: {method(a)}");
+﻿Console.WriteLine("Введите количество цифр: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(String.Join(",",createArrayAndCount(size)));
 
-int method(int size)
+int[] createArrayAndCount(int num)
 {
-    int[] array = new int[size];
+    int[] array = new int [num];
     int count = 0;
-    for (int i = 0; i < size; i++)
+for (int i = 0; i < num; i++)
+{
+    Console.WriteLine($"Введите число №{i+1}: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+    if (array[i]>0) // 0-положительное число?
     {
-        array[i]=new Random().Next(100, 1000);
-        if (array[i]%2==0)
-        {
-            count++;
-        }
+        count++;
     }
-    Console.WriteLine(string.Join(",",array));
-    return count;
+}
+Console.WriteLine(String.Join(",",array));
+Console.WriteLine($"Положительных чисел: {count}");
+return array;
 }
