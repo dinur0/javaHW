@@ -1,26 +1,23 @@
-﻿Console.WriteLine("Введите размер массива: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Ответ: {method(a)}");
-
-// int method(int size)
-// {
-//     int[] array = new int[size];
-//     int count = 0;
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i]=new Random().Next(1, 100);
-//         if (i%2==1)
-//         {
-//             count+=array[i];
-//         }
-//     }
-//     Console.WriteLine(string.Join(",",array));
-//     return count;
-// }
-int method(int size)
+﻿Console.WriteLine("Введите первую координату первой линии: ");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите вторую координату первой линии: ");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите превую координату второй линии: ");
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите вторую координату второй линии: ");
+double k2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Ответ: {String.Join("|",pointSearch(b1, k1, b2, k2))}");
+double[] pointSearch(double numb1, double numk1, double numb2, double numk2)
 {
-    for (int i = 0; i < length; i++)
-    {
-        
-    }
+    double x = (numb2-numb1) / (numk1-numk2);
+    double[] array = new double [2];
+    array[0] = numk1*x+numb1;
+    array[1] = numk2*x+numb2;
+    return array;
 }
+
+// double a = 2;
+// double b = 4;
+
+// double x = a / b;
+// Console.WriteLine(x);
