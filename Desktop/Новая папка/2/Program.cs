@@ -15,9 +15,3 @@ double[] pointSearch(double numb1, double numk1, double numb2, double numk2)
     array[1] = numk2*x+numb2;
     return array;
 }
-
-// double a = 2;
-// double b = 4;
-
-// double x = a / b;
-// Console.WriteLine(x);
