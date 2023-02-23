@@ -1,8 +1,10 @@
-print ('Введите общее кол-во журавликов')
-g = int(input())
-if g%6==0:
-    print ('Петя = ',g//6)
-    print ('Сережа = ',g//6)
-    print ('Катя = ',g//6*4)
-else:
-    print ('Они не могли сделать столько журавликов')
+s = int(input("Введите сумму "))
+p = int(input("Введите произведение "))
+first=0
+second=0
+
+while first*second!=p:
+    first+=1
+    second=s-first
+    if first*second==p:
+        print(f"Ответ: {first,second}")

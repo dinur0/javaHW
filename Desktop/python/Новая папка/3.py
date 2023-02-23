@@ -1,13 +1,7 @@
-print ('Введите шестизначный номер билета')
-g = int(input())
-if g>=100000 and g<=999999:
-    a = g//1000
-    b = g%1000
-    firstSumm = a//100+a%100//10+a%10
-    secondHalf = b//100+b%100//10+b%10
-    if firstSumm==secondHalf:
-        print ('yes')
-    else:
-        print ('no')
-else:
-    print ('Билет должен быть шестизначным')
+a = int(input("Введите число "))
+count = 0
+b = 1
+while b<=a:
+    count +=1
+    b*=2
+    print(b//2)

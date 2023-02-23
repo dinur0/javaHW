@@ -1,10 +1,18 @@
-print ('Введите 3-х значное число')
-g = int(input())
-if g<100 or g>999:
-    print ('Введено неправильное число')
+import random
+n = int(input("Введите кол-во монет "))
+array = ""
+countO = 0
+countP = 0
+for i in range(n):
+    array += random.choice("OP")
+    if array[i]=="O":
+        countO +=1
+    else:
+        countP +=1
+print (array)
+if countO>countP:
+    print (f"Надо перевернуть {countP}")
 else:
-    a = g//100
-    b = g%100//10
-    c = g%10
-    print(f"{a}+{b}+{c}")
-    print (a+b+c)
+    print (f"Надо перевернуть {countO}")
+
+
