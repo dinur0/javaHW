@@ -1,18 +1,11 @@
 import random
-n = int(input("Введите кол-во монет "))
-array = ""
-countO = 0
-countP = 0
+n = int(input("Введите кол-во элементов: "))
+array = []
+x = int(input("Введите число: "))
+count = 0
 for i in range(n):
-    array += random.choice("OP")
-    if array[i]=="O":
-        countO +=1
-    else:
-        countP +=1
-print (array)
-if countO>countP:
-    print (f"Надо перевернуть {countP}")
-else:
-    print (f"Надо перевернуть {countO}")
-
-
+    array.append(int(input("Введите элемент массива: ")))
+    if array[i]==x:
+        count+=1
+print(*array)
+print(f"Ответ: {count}")
