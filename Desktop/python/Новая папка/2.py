@@ -1,5 +1,5 @@
 import random
-n = int(input("Введите кол-во элементов: "))
+n = int(input("Введите кол-во кустов: "))
 list = []
 for i in range(n):
     list.append(random.randint(1,10))
