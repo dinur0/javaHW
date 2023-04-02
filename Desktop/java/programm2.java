@@ -3,18 +3,18 @@ import java.util.Scanner;
 public class programm2 {
     public static void main(String[] args) {   
         Scanner iScanner = new Scanner(System.in);
-        System.out.println("Длина:");
-        int len = iScanner.nextInt();
-        int[] arr = new int[len];
-        System.out.println("заполните массив:");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = iScanner.nextInt();
+        System.out.println("строка");
+        String s = iScanner.nextLine();
+        String [] sArr = s.split("");
+        int [] index = new int [s.length()];
+        System.out.println("индексы:");
+        for (int num = 0; num < index.length; num++) {
+            index[num] = iScanner.nextInt();
         }
-        System.out.println("на что умножить?");
-        int x = iScanner.nextInt();
-        for (int j = 0; j < arr.length; j++) {
-            System.out.println(arr[j]*x);
-            // arr[j] *= x ;
-        }
-    }
+        String [] res = new String[s.length()];
+        for (int i = 0; i < sArr.length; i++) {
+            res[i]=sArr[index[i]-1]; //fsff//
+            }
+        System.out.println(String.join("", res));
+        }   
 }
