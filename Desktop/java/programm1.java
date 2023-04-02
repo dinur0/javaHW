@@ -1,23 +1,17 @@
-import java.util.Scanner;
-
 public class programm1 {
-    public static void main(String[] args) {   
-        Scanner iScanner = new Scanner(System.in);
-        System.out.println("x:");
-        int x = iScanner.nextInt();
-        System.out.println("y:");
-        int y = iScanner.nextInt();
-        int[] arr = new int[1000];
-        for (int i = 0; i < 1000; i++) {
-            arr[i]=i*i*i;
-        }
-        for (int j = 0; j < 1000; j++) {
-            if (j==x) {
-                System.out.println(arr[x]);
+    public static void main(String[] args) { 
+        String jewels = "aB";
+        String [] arrJewels = jewels.split("");
+        String stones = "aaaAbbbBB";
+        String [] arrStones = stones.split("");
+        for (int i = 0; i < arrJewels.length; i ++){
+            int count = 0;
+            for (int j = 0; j < arrStones.length; j++) {
+                if (arrStones[j].equals(arrJewels[i])){
+                    count++;
+                    }
             }
-            if (j==y) {
-                System.out.println(arr[y]);
-            }
+            System.out.print(arrJewels[i]+count);
         }
     }
 }
